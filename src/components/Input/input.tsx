@@ -17,6 +17,7 @@ export const LabeledInput: React.FC<IInputProps> = ({ label, type, placeholder, 
       onChangeHandler(value);
     } else {
       evt.target.value = '';
+      onChangeHandler(0);
     }
   };
 
