@@ -13,7 +13,7 @@ export const LabeledInput: React.FC<IInputProps> = ({ label, type, placeholder, 
   const inputHandler = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(evt.target.value);
 
-    if (value >= 0) {
+    if (value >= 0 && value < 100) {
       onChangeHandler(value);
     } else {
       evt.target.value = '';
